@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCR Church - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the slideshow */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden; /* Hide parts of images outside the container */
+            border-radius: 0.5rem; /* Rounded corners for the slideshow */
+        }
+
+        .mySlides {
+            display: none; /* Hide slides by default */
+            width: 100%;
+            height: 400px; /* Fixed height for consistency */
+            object-fit: cover; /* Cover the area without distortion */
+            transition: opacity 1s ease-in-out; /* Smooth fade transition */
+        }
+
+        .mySlides.active {
+            display: block; /* Show active slide */
+        }
+
+        /* Ensure images within slides are responsive */
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Styling for navigation links */
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+            color: #60A5FA; /* A light blue for hover */
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-blue-800">CCR Church</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Home</a></li>
+                    <li><a href="faith.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Statement of Faith</a></li>
+                    <li><a href="announcements.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Announcements</a></li>
+                    <li><a href="sermons.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Sermons</a></li>
+                    <li><a href="contact.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Welcome to Our Community!</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Join us in worship, fellowship, and service as we grow together in faith and love.
+                We are a welcoming community dedicated to sharing the message of hope and building
+                a stronger spiritual foundation for all.
+            </p>
+        </section>
+
+        <section class="mb-12">
+            <div class="slideshow-container shadow-lg">
+                <img class="mySlides active" src="https://placehold.co/1200x400/87CEEB/FFFFFF?text=Church+Community+1" alt="Church Community 1">
+                <img class="mySlides" src="https://placehold.co/1200x400/90EE90/FFFFFF?text=Worship+Service" alt="Worship Service">
+                <img class="mySlides" src="https://placehold.co/1200x400/FFD700/FFFFFF?text=Fellowship+Event" alt="Fellowship Event">
+                <img class="mySlides" src="https://placehold.co/1200x400/FF6347/FFFFFF?text=Outreach+Program" alt="Outreach Program">
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-3">About Us</h3>
+                <p class="text-gray-700">
+                    Learn about our mission, vision, and the values that guide our church community.
+                    We are committed to serving God and our neighbors with compassion and dedication.
+                </p>
+                <a href="faith.html" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">Read More &rarr;</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-3">Upcoming Events</h3>
+                <p class="text-gray-700">
+                    Stay updated with our latest events, gatherings, and community activities.
+                    From Bible studies to potlucks, there's always something happening!
+                </p>
+                <a href="announcements.html" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">View Events &rarr;</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-3">Latest Sermons</h3>
+                <p class="text-gray-700">
+                    Catch up on recent sermons and inspiring messages from our pastors.
+                    Grow in your understanding of God's word.
+                </p>
+                <a href="sermons.html" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">Listen Now &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-800 text-white py-6 text-center rounded-t-lg">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 CCR Church. All rights reserved.</p>
+            <p class="mt-2">123 Church Street, City, State 12345 | (555) 123-4567 | info@ccrchurch.cc</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.mySlides');
+
+        function showSlides() {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Increment slide index
+            slideIndex++;
+            // Reset if past the last slide
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Show the current slide
+            slides[slideIndex - 1].classList.add('active');
+
+            // Call showSlides again after 3 seconds
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        // Start the slideshow when the page loads
+        document.addEventListener('DOMContentLoaded', showSlides);
+    </script>
+</body>
+</html>
