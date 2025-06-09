@@ -9,7 +9,7 @@ function showSlides() {
         slideIndex = 1;
     }
     slides[slideIndex - 1].classList.add('active');
-    setTimeout(showSlides, 1000);
+    setTimeout(showSlides, 3000);
 }
 
 const mobileMenuButton = document.getElementById('mobile-menu-button');
