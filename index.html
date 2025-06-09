@@ -5,143 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCR Church - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for the slideshow */
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            overflow: hidden; /* Hide parts of images outside the container */
-            border-radius: 0.5rem; /* Rounded corners for the slideshow */
-        }
-
-        .mySlides {
-            display: none; /* Hide slides by default */
-            width: 100%;
-            height: 400px; /* Fixed height for consistency */
-            object-fit: cover; /* Cover the area without distortion */
-            transition: opacity 1s ease-in-out; /* Smooth fade transition */
-        }
-
-        .mySlides.active {
-            display: block; /* Show active slide */
-        }
-
-        /* Ensure images within slides are responsive */
-        .mySlides img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Styling for navigation links */
-        .nav-link {
-            transition: all 0.2s ease-in-out;
-        }
-        .nav-link:hover {
-            transform: translateY(-2px);
-            color: #60A5FA; /* A light blue for hover */
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="font-sans bg-gray-100 text-gray-800">
-    <header class="bg-white shadow-md py-4">
+
+<body class="font-sans bg-gray-100 text-gray-800"> 
+    <header class="fixed top-0 left-0 w-full z-10 bg-brown-translucent py-5 shadow-md">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-blue-800">†洛克維尓基督教會 Christian Church in Rockville</h1>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Home</a></li>
-                    <li><a href="faith.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Statement of Faith</a></li>
-                    <li><a href="announcements.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Announcements</a></li>
-                    <li><a href="sermons.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Sermons</a></li>
-                    <li><a href="contact.html" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-600">Contact</a></li>
+            <h1 class="text-3xl font-bold text-white pr-4">†洛克維尓基督教會 Christian Church in Rockville</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6 pl-4">
+                    <li><a href="index.html" class="nav-link text-lg font-medium text-white">首页 Home</a></li>
+                    <li><a href="faith.html" class="nav-link text-lg font-medium text-white">信仰宣言 Statement of Faith</a></li>
+                    <li><a href="announcements.html" class="nav-link text-lg font-medium text-white">公告 Announcements</a></li>
+                    <li><a href="sermons.html" class="nav-link text-lg font-medium text-white">信息 Sermons</a></li>
+                    <li><a href="contact.html" class="nav-link text-lg font-medium text-white">联系 Contact</a></li>
                 </ul>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Open mobile menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-brown-translucent z-20 flex flex-col items-center justify-center transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <button id="close-menu-button" class="absolute top-4 right-4 text-white focus:outline-none" aria-label="Close mobile menu">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+            <nav class="flex flex-col space-y-8 text-center">
+                <a href="index.html" class="nav-link text-3xl font-medium text-white hover:text-gray-300">首页 Home</a></li>
+                <a href="faith.html" class="nav-link text-3xl font-medium text-white hover:text-gray-300">信仰宣言 Statement of Faith</a></li>
+                <a href="announcements.html" class="nav-link text-3xl font-medium text-white hover:text-gray-300">公告 Announcements</a></li>
+                <a href="sermons.html" class="nav-link text-3xl font-medium text-white hover:text-gray-300">信息 Sermons</a></li>
+                <a href="contact.html" class="nav-link text-3xl font-medium text-white hover:text-gray-300">联系 Contact</a></li>
             </nav>
         </div>
     </header>
-
-    <main class="container mx-auto px-4 py-8">
-        <section class="text-center mb-12">
-            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Welcome to Our Community!</h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Join us in worship, fellowship, and service as we grow together in faith and love.
-                We are a welcoming community dedicated to sharing the message of hope and building
-                a stronger spiritual foundation for all.
-            </p>
-        </section>
-
-        <section class="mb-12">
-            <div class="slideshow-container shadow-lg">
-                <img class="mySlides active" src="https://placehold.co/1200x400/87CEEB/FFFFFF?text=Church+Community+1" alt="Church Community 1">
-                <img class="mySlides" src="https://placehold.co/1200x400/90EE90/FFFFFF?text=Worship+Service" alt="Worship Service">
-                <img class="mySlides" src="https://placehold.co/1200x400/FFD700/FFFFFF?text=Fellowship+Event" alt="Fellowship Event">
-                <img class="mySlides" src="https://placehold.co/1200x400/FF6347/FFFFFF?text=Outreach+Program" alt="Outreach Program">
+    
+    <main class="">
+        <section class="mt-[148px] md:mt-[76px] mb-12">
+            <div class="slideshow-container w-full shadow-lg opacity-100 ">
+                <img class="mySlides active h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/baptism.jpg" alt="Church Community 1">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/baptism2.jpg" alt="Church Community 2">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/baptism3.jpeg" alt="Church Community 3">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/baptism4.jpg" alt="Church Community 4">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/baptism5.jpg" alt="Church Community 5">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/picnic1.jpeg" alt="Picnic 1">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/picnic2.jpeg" alt="Picnic 2">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/picnic3.jpg" alt="Picnic 3">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/picnic4.jpg" alt="Picnic 4">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/picnic5.jpg" alt="Picnic 5">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/picnic6.jpg" alt="Picnic 6">
+                <img class="mySlides h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[650px]" src="images/picnic7.jpg" alt="Picnic 7">
             </div>
         </section>
+        <section id="about" class="py-4 md:py-6" style="font-family: 'Times New Roman', sans-serif;">
+            <h2 class="text-4xl text-center font-bold mb-8"style= "color: #a0522d">Welcome to our CCR Family &#9829 <br>欢迎加入我们的 CCR 大家庭 &#9829</h2>
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+                
+                <div class="text-center md:w-1/2 md:text-left">
+                    <h6><strong>主日聚会:<br>
+                    {Sunday Worship Time }</strong></h6>
+                    <h6>10:00 am 主日敬拜,擘餅聚会 {Worship &amp; Communion}</h6>
+                    <h6>11:00 am 主日信息 {Sermon}</h6>
+                    <hr>
+                    <h6>11:00 am 兒童主日學 {Children Sunday School}</h6>
+                    <h6>College Gardens Elementary School<br>
+                    1700 Yale Place, Rockville, MD 20850</h6>
+                    <hr>
+                    <h6>线上聚会 {Virtual online zoom meeting}</h6>
+                    <h6><strong>週三禱告会:</strong><br>
+                    <hr>
+                    <strong> {Wednesday Night's Prayer Meeting Time } </strong>8:00pm – 9:30pm</h6>
+                    <h6><strong>週五小組聚會:</strong><br>
+                    <strong> {Friday Night's Bible Study &amp; Fellowship Time} </strong>7:30 pm – 9:30 pm</h6>
+                </div>
+                <div class="text-center md:w-1/2">
 
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <h3 class="text-2xl font-semibold text-blue-700 mb-3">About Us</h3>
+                <h3 class="text-2xl font-semibold mb-3" style= "color: #a0522d">About Us</h3>
                 <p class="text-gray-700">
                     Learn about our mission, vision, and the values that guide our church community.
                     We are committed to serving God and our neighbors with compassion and dedication.
                 </p>
-                <a href="faith.html" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">Read More &rarr;</a>
+                <a href="faith.html" class="mt-4 inline-block hover: font-medium"style= "color: #a0522d">Read More &rarr;</a>
             </div>
 
             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <h3 class="text-2xl font-semibold text-blue-700 mb-3">Upcoming Events</h3>
+                <h3 class="text-2xl font-semibold mb-3"style= "color: #a0522d">Upcoming Events</h3>
                 <p class="text-gray-700">
                     Stay updated with our latest events, gatherings, and community activities.
                     From Bible studies to potlucks, there's always something happening!
                 </p>
-                <a href="announcements.html" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">View Events &rarr;</a>
+                <a href="announcements.html" class="mt-4 inline-block hover: font-medium"style= "color: #a0522d">View Events &rarr;</a>
             </div>
 
             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <h3 class="text-2xl font-semibold text-blue-700 mb-3">Latest Sermons</h3>
+                <h3 class="text-2xl font-semibold mb-3"style= "color: #a0522d">Latest Sermons</h3>
                 <p class="text-gray-700">
                     Catch up on recent sermons and inspiring messages from our pastors.
                     Grow in your understanding of God's word.
                 </p>
-                <a href="sermons.html" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">Listen Now &rarr;</a>
+                <a href="sermons.html" class="mt-4 inline-block hover: font-medium"style= "color: #a0522d">Listen Now &rarr;</a>
+            </div>
+        </section>
+        <section id="copyright" class="py-4 md:py-6" style="font-family: 'Times New Roman', sans-serif;">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+                
+                <div class="text-center md:w-1/2 md:text-left">
+                    引用或转载信息录音或是文档至任何其他平台或是网站必须事先征求教会同意。个人阅览及收藏不受上述限制。
+                </div>
+                <div class="text-center md:w-1/2">
+                    All materials posted on this website (e.g. recordings or documents) may not be reposted, collected, or distributed on publicly accessible platforms without prior consent from the Christian Church in Rockville. Personal reading and collection are not subject to the above restrictions.
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-blue-800 text-white py-6 text-center rounded-t-lg">
+    <footer class="bg-brown-translucent text-white py-6 text-center rounded-t-lg">
         <div class="container mx-auto px-4">
             <p>&copy; 2025 CCR Church. All rights reserved.</p>
-            <p class="mt-2">123 Church Street, City, State 12345 | (555) 123-4567 | info@ccrchurch.cc</p>
+            <p class="mt-2">1700 Yale Pl, Rockville, MD 20850 | <a href="tel:+13016931375">(301) 693-1375</a> | <a href="mailto:ccrchurchweb@gmail.com">ccrchurchweb@gmail.com</a></p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 
-    <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.mySlides');
-
-        function showSlides() {
-            // Hide all slides
-            slides.forEach(slide => {
-                slide.classList.remove('active');
-            });
-
-            // Increment slide index
-            slideIndex++;
-            // Reset if past the last slide
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-
-            // Show the current slide
-            slides[slideIndex - 1].classList.add('active');
-
-            // Call showSlides again after 3 seconds
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-
-        // Start the slideshow when the page loads
-        document.addEventListener('DOMContentLoaded', showSlides);
-    </script>
 </body>
 </html>
