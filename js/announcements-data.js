@@ -3,7 +3,7 @@
 const announcementsData = [
     {
         id: "annual-church-picnic-2025", // Unique identifier for this announcement
-        title: "2025 CCR Annual Church Picnic 年教烧烤活动 !!",
+        title: "2025 CCR Summer Church Picnic Fellowship 教会夏季野歺烧烤交通 !!",
         date: "Date/日期: 06 - 14 - 2025 | Time/时间 10:00 AM - 2:00 PM",
         shortDescription: "Join us for our annual church picnic at Wheaton Regional Park! Enjoy food, games, and fellowship. Please sign up using the google form if you plan to attend.<br>欢迎参加我们在惠顿地区公园举办的年度教堂野餐！享受美食、游戏和友谊。如果您计划参加，请使用谷歌表单报名。",
         // Full description can contain HTML for rich text formatting
