@@ -26,12 +26,10 @@ const announcementsData = [
         shortDescription: "We will have a combined meeting with Christian Church of Clarksburg, sermon by Brother Peter Liu. <br> 我们将与克拉克斯堡基督教堂举行联合聚会，由刘志雄弟兄讲道。",
         // Full description can contain HTML for rich text formatting
         fullDescription1: `
-            <p class="mb-4">Join through our Zoom link, password is 8891717:</p>
-            <p style= "color: #a0522d"><a href="https://zoom.us/j/7328891717?pwd=RGpUNTJSWDJJNEI1alpxb0c2RzZtZz09">Zoom Link </a></p>
+            <p class="text-base text-gray-700">Please contact Brother Sheng for Zoom Link Information: <a class="hover:underline"style= "color: #a0522d"href="tel:+13013510736">(301) 351-0736</a></p>
         `,
         fullDescription2: `
-            <p class="mb-4"> 通过我们的 Zoom 链接加入，密码是 8891717:</p>
-            <p style= "color: #a0522d"><a href="https://zoom.us/j/7328891717?pwd=RGpUNTJSWDJJNEI1alpxb0c2RzZtZz09">Zoom 链接</a></p>
+            <p class="text-base text-gray-700">请联系Sheng弟兄获取 Zoom Link 信息： <a class="hover:underline"style= "color: #a0522d"href="tel:+13013510736">(301) 351-0736</a></p>
         `,
         imageUrlChi: "images/location.png",
         imageUrlEng: "images/pursuitbulletin.png",
