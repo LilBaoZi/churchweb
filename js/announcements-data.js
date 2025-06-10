@@ -6,10 +6,10 @@ const announcementsData = [
         shortDescription: "Come join us for a summer BBQ at Wheaton Regional Park! Enjoy food, games, and friendship.<br>欢迎参加我们在惠顿地区公园举办的夏季烧烤野餐交通！享受美食、游戏和友谊。",
 
         fullDescription2: `
-            <p class="md:mb-4">欢迎参加我们在惠顿地区公园举办的夏季烧烤野餐交通！享受美食、游戏和友谊。</p>
+            <p class="md:mb-4">Come join us for a summer BBQ at Wheaton Regional Park! Enjoy food, games, and friendship.</p>
         `,
         fullDescription1: `  
-             
+             <p class="md:mb-4">欢迎参加我们在惠顿地区公园举办的夏季烧烤野餐交通！享受美食、游戏和友谊。</p>
         `,
         imageUrlChi: "images/picnicChi.jpg",
         imageUrlEng: "images/picnicEng.jpg",
