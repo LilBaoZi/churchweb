@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCR Church - Announcements</title>
+    <title>CCR Church - Announcement Detail</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="font-sans bg-gray-100 text-gray-800"> 
+    <!-- Header section - identical to other pages for consistency -->
     <header class="fixed top-0 left-0 w-full z-10 bg-brown-translucent py-5 shadow-md">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <h1 class="text-3xl font-bold text-white pr-4">†洛克維尓基督教會 Christian Church in Rockville</h1>
@@ -41,16 +42,27 @@
     </header>
 
     <main class="container mx-auto px-4 py-8">
-        <section class="text-center mb-12 mt-28 md:mt-[76px]">
-            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Church Announcements</h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Stay informed about upcoming events, community news, and special messages from our church family.
-            </p>
-        </section>
 
-        <div id="announcements-list" class="grid grid-cols-1 md:grid-cols-1 gap-8 mb-12">
-        </div>
+        <section id="announcement-detail-content" class="mt-28 md:mt-[76px] bg-white p-8 rounded-lg shadow-md mb-12">
+            
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="announcement-title"></h2>
+            <p class="text-gray-500 text-sm mb-6" id="announcement-date"></p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700 text-lg">
+            <div class="text-gray-700 text-lg leading-relaxed" id="announcement-full-description2"></div>
+            <div class="text-gray-700 text-lg leading-relaxed" id="announcement-full-description1"></div>
+            <img id="announcement-image2" src="" alt="" class="w-full h-auto rounded-lg mb-6 shadow-sm object-cover">
+            <img id="announcement-image1" src="" alt="" class="w-full h-auto rounded-lg mb-6 shadow-sm object-cover">
+            
+            </div>
+            
+            <a href="announcements.html" class="mt-8 inline-block bg-brown-translucent text-white font-bold py-3 px-6 rounded-md transition-colors duration-300 hover:opacity-80">
+                &larr; Back to Announcements
+            </a>
+            
+        </section>
     </main>
+
 
     <footer class="bg-brown-translucent text-white py-6 text-center rounded-t-lg">
         <div class="container mx-auto px-4">
@@ -59,52 +71,9 @@
         </div>
     </footer>
 
+
     <script src="js/announcements-data.js"></script>
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const closeMenuButton = document.getElementById('close-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-0');
-            mobileMenu.classList.remove('-translate-x-full');
-        });
-
-        closeMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('translate-x-0');
-            mobileMenu.classList.add('-translate-x-full');
-        });
-
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('translate-x-0');
-                mobileMenu.classList.add('-translate-x-full');
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const announcementsList = document.getElementById('announcements-list');
-            if (announcementsList && typeof announcementsData !== 'undefined') {
-                announcementsData.forEach(announcement => {
-                    const announcementCard = document.createElement('div');
-                    announcementCard.className = 'bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300';
-                    
-                    announcementCard.innerHTML = `
-                        <h3 class="text-2xl font-semibold mb-2 text-brown-text">${announcement.title}</h3>
-                        <p class="text-gray-500 text-sm mb-3">${announcement.date}</p>
-                        <p class="text-gray-700 mb-4">${announcement.shortDescription}</p>
-                        <a href="announcement-detail.html?id=${announcement.id}" 
-                           class="inline-block bg-brown-translucent text-white font-bold py-2 px-4 rounded-md 
-                                  transition-colors duration-300 hover:opacity-80">
-                            Learn More 了解更多
-                        </a>
-                    `;
-                    announcementsList.appendChild(announcementCard);
-                });
-            } else {
-                console.error("Announcements list container not found or announcementsData is not defined.");
-            }
-        });
-    </script>
+    <script src="js/announcement-detail.js"></script>
 </body>
 </html>
