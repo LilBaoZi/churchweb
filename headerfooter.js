@@ -40,7 +40,7 @@ class GenFooter extends HTMLElement {
         this.innerHTML = `
             <footer class="bg-brown-translucent text-white py-6 text-center rounded-t-lg">
         <div class="container mx-auto px-4">
-            <p>&copy; 2025 CCR Church. All rights reserved.</p>
+            <p>&copy; 2026 CCR Church. All rights reserved.</p>
             <p class="mt-2">1700 Yale Pl, Rockville, MD 20850 | <a href="tel:+13013510736">(301) 351-0736</a> | <a href="mailto:ccrchurchweb@gmail.com">ccrchurchweb@gmail.com</a></p>
         </div>
 </footer>
